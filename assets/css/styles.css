@@ -46,18 +46,18 @@ textarea {
 }
 
 .past {
-    background-color: #d3d3d3;
-    color: white;
+    background-color: #e4e4e4;
+    color: black;
 }
 
 .present {
-    background-color: #ff6961;
-    color: white;
+    background-color: #ffa19d;
+    color: rgb(68, 0, 0);
 }
 
 .future {
     background-color: #77dd77;
-    color: white;
+    color: rgb(0, 36, 0);
 }
 
 .saveBtn {
@@ -68,15 +68,21 @@ textarea {
     color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn::before,
+.saveBtn:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.warning {
-    background-color: rgba(255, 100, 100, 0.5);
+.visible {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
 }
 
-.warning::placeholder {
-    color: rgb(65, 0, 5);
-    opacity: 1;
+.visible::after {
+    content: "✔️";
+}
+
+.confirmed {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
 }
